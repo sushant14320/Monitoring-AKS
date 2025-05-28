@@ -1,5 +1,5 @@
 # Monitoring-AKS
-In my organization we have AKS setup where we have deployed multiple application. In order to monitor it we have implemented Grafana + Prometheus for colling metrics and visualising it on Grafana.
+In my organization we have AKS setup where we have deployed multiple application. In order to monitor it we have implemented Grafana + Prometheus for collecting metrics and visualising it on Grafana.
 
 Promethues will collect **Real-time metrics from pods, nodes, and containers**
 
