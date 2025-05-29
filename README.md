@@ -1,4 +1,5 @@
-######################### **Monitoring-AKS** 
+######################### **Monitoring-AKS**
+
 In my organization we have AKS setup where we have deployed multiple application. In order to monitor it we have implemented Grafana + Prometheus for collecting metrics and visualising it on Grafana.
 
 Promethues will collect **Real-time metrics from pods, nodes, and containers**
@@ -32,8 +33,9 @@ The reason why storage class is used because PV will not work in multicluster no
 
 
 
-######################### **Monitoring application logs** 
-In order to monitor application losg stored at custom path inside container, weuse Loki + Promtail setup and viualize it on Grafana.
+######################### **Monitoring application logs**  
+
+In order to monitor application losg stored at custom path inside container, weuse Loki + Promtail setup and visualise it on Grafana.
 
 
 **Step 1: Install Loki using helm with grafana and promtail disabled**
