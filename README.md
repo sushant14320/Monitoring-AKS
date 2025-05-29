@@ -1,4 +1,4 @@
-######################### **Monitoring-AKS** ################################################################################
+######################### **Monitoring-AKS** 
 In my organization we have AKS setup where we have deployed multiple application. In order to monitor it we have implemented Grafana + Prometheus for collecting metrics and visualising it on Grafana.
 
 Promethues will collect **Real-time metrics from pods, nodes, and containers**
@@ -21,9 +21,18 @@ kubectl edit svc monitoring-grafana -n mon
 **Step 4: Alternatively, you can change the config of prometheus as needed**
 helm show values prometheus-community/kube-prometheus-stack > values.yaml
 
+**Step 5: Create storage class and PVC to mount logs** 
+The reason why storage class is used because PV will not work in multicluster node.
+
+**Step 6: Create deployment of the promtail with prontail image**
+
+**Step 7: Finally apply all the yaml files**
+
+**Step 8: Go to Grafana and add Loki as data source and paste the LOKI url. Create a dashboard and select Loki as data source and then you will be able to query application logs.**
 
 
-######################### **Monitoring application logs** ################################################################################
+
+######################### **Monitoring application logs** 
 In order to monitor application losg stored at custom path inside container, weuse Loki + Promtail setup and viualize it on Grafana.
 
 
