@@ -22,14 +22,7 @@ kubectl edit svc monitoring-grafana -n mon
 **Step 4: Alternatively, you can change the config of prometheus as needed**
 helm show values prometheus-community/kube-prometheus-stack > values.yaml
 
-**Step 5: Create storage class and PVC to mount logs** 
-The reason why storage class is used because PV will not work in multicluster node.
 
-**Step 6: Create deployment of the promtail with prontail image**
-
-**Step 7: Finally apply all the yaml files**
-
-**Step 8: Go to Grafana and add Loki as data source and paste the LOKI url. Create a dashboard and select Loki as data source and then you will be able to query application logs.**
 
 
 -------------------------------------------------------
@@ -51,3 +44,18 @@ This is will tell promtail from where ( directory ) to scrape logs
 
 **Step 3: Edit the loki service from ClusterIP to Grafana**
 This will be useful whil adding Loki as data source to Grafana
+
+
+**Step 4: Create storage class and PVC to mount logs** 
+The reason why storage class is used because PV will not work in multicluster node.
+
+**Step 5: Create deployment of the promtail with prontail image**
+
+**Step 6: Finally apply all the yaml files**
+
+**Step 7: Go to Grafana and add Loki as data source and paste the LOKI url. Create a dashboard and select Loki as data source and then you will be able to query application logs.**
+
+
+
+
+
