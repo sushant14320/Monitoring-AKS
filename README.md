@@ -32,6 +32,9 @@ The reason why storage class is used because PV will not work in multicluster no
 **Step 8: Go to Grafana and add Loki as data source and paste the LOKI url. Create a dashboard and select Loki as data source and then you will be able to query application logs.**
 
 
+-------------------------------------------------------
+
+
 
 ######################### **Monitoring application logs**  
 
